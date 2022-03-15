@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(90deg, rgb(84, 130, 255), rgb(100, 255, 134));
+}
+i {
+  pointer-events: none;
+}
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input,
+  button {
+    font-size: 1.75rem;
+    border: none;
+    margin: 0.3rem;
+    padding: 0.25rem 0.5rem;
+  }
+  input[type="number"] {
+    width: 3.25rem;
+    text-align: center;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  button {
+    cursor: pointer;
+    background-color: rgb(0, 146, 144);
+    color: white;
+  }
+}
+
+div.sort {
+  display: flex;
+  justify-content: center;
+  button {
+    cursor: pointer;
+    background-color: rgb(0, 146, 144);
+    color: white;
+    font-size: 1.75rem;
+    border: none;
+    margin: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  div.toDo {
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+    width: 30%;
+    h4 {
+      padding: 0.75rem 1rem;
+      background-color: white;
+    }
+    h4.list {
+      flex-grow: 2;
+    }
+    h4.date {
+      flex-grow: 1;
+      text-align: end;
+    }
+    button {
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      font-size: 1.75rem;
+      color: white;
+      border: none;
+    }
+    button.check {
+      background-color: rgb(100, 206, 100);
+    }
+    button.trash {
+      background-color: red;
+    }
+  }
+}
+.checked {
+  opacity: 0.3;
+  text-decoration: line-through;
+  text-decoration-thickness: 4px;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
